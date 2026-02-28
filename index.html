@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AFL Tenable Daily</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <p class="eyebrow">AFL TENABLE DAILY</p>
+        <h1 id="question-title">Loading today’s question…</h1>
+        <p id="question-subtitle" class="subtitle">
+          Name all 10 answers to win.
+        </p>
+      </header>
+
+      <section class="input-panel" aria-label="Submit answers">
+        <label for="answer-input">Your answer</label>
+        <div class="input-row">
+          <input
+            id="answer-input"
+            name="answer"
+            type="text"
+            placeholder="Type player name"
+            autocomplete="off"
+            maxlength="60"
+          />
+          <button id="submit-answer" type="button">Submit</button>
+        </div>
+        <p class="helper-text">
+          You can keep guessing until all 10 are found.
+        </p>
+      </section>
+
+      <section class="board" aria-live="polite">
+        <h2>Top 10 Board</h2>
+        <ol id="answer-board" class="answer-board"></ol>
+      </section>
+
+      <section class="status-panel">
+        <p id="status-message">Good luck!</p>
+        <button id="reset-progress" class="secondary" type="button">
+          Reset progress
+        </button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
