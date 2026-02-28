@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AFL Tenable</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <p class="eyebrow">AFL TENABLE</p>
+        <h1 id="question-title">Loading…</h1>
+        <p id="question-subtitle" class="subtitle">Find all 10.</p>
+      </header>
+
+      <section class="input-panel" aria-label="Submit answers">
+        <div class="input-row">
+          <input
+            id="answer-input"
+            name="answer"
+            type="text"
+            placeholder="Player"
+            autocomplete="off"
+            maxlength="60"
+          />
+          <button id="submit-answer" type="button">Enter</button>
+        </div>
+      </section>
+
+      <section class="board" aria-live="polite">
+        <h2>Top 10</h2>
+        <ol id="answer-board" class="answer-board"></ol>
+      </section>
+
+      <section class="status-panel">
+        <p id="status-message">Good luck.</p>
+        <button id="reset-progress" class="secondary" type="button">Reset</button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
