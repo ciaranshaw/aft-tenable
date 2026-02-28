@@ -82,12 +82,14 @@ function submitGuess() {
 
   if (!match) {
     setStatus(`“${rawGuess}” is not on the board.`, "warning");
+    animateMiss();
     answerInput.select();
     return;
   }
 
   if (foundAnswers.has(match.answer)) {
     setStatus(`${match.answer} is already revealed.`, "warning");
+    animateMiss();
     answerInput.select();
     return;
   }
@@ -157,6 +159,12 @@ function loadSavedProgress() {
   } catch {
     return [];
   }
+}
+
+function animateMiss() {
+  answerInput.classList.remove("shake");
+  void answerInput.offsetWidth;
+  answerInput.classList.add("shake");
 }
 
 function normalize(value) {
